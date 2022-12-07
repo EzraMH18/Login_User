@@ -21,3 +21,12 @@ class ShowPasswordEvent extends RegisterEvent {
   @override
   List<Object?> get props => [isShown];
 }
+
+class ShowConfirmPasswordEvent extends RegisterEvent {
+  final bool isShown;
+
+  const ShowConfirmPasswordEvent(this.isShown);
+
+  @override
+  List<Object?> get props => [isShown];
+}

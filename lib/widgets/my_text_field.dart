@@ -8,7 +8,6 @@ class MyTextField extends StatelessWidget {
   final bool isObscureText;
   final TextInputType keyboardType;
   final TextCapitalization textCapitalization;
-  final List<String? Function(String?)>? validators;
   final Function(String?)? onChanged;
   final Widget? suffixIcon;
   final Widget? preffixIcon;
@@ -20,7 +19,6 @@ class MyTextField extends StatelessWidget {
       this.isObscureText = false,
       this.keyboardType = TextInputType.text,
       this.textCapitalization = TextCapitalization.none,
-      this.validators,
       this.onChanged,
       this.suffixIcon,
       this.preffixIcon,
@@ -41,14 +39,11 @@ class MyTextField extends StatelessWidget {
       style: const TextStyle(color: Colors.black, fontSize: 16),
       decoration: InputDecoration(
         labelText: label,
+        hintText: hint,
         suffixIcon: suffixIcon,
         prefixIcon: preffixIcon,
         labelStyle: const TextStyle(color: Colors.black),
-        border: const OutlineInputBorder(
-          borderRadius: BorderRadius.all(Radius.circular(10)),
-          borderSide: BorderSide(color: Colors.black, width: 2),
-        ),
-        hintText: hint,
+        border: const OutlineInputBorder(),
       ),
       onChanged: onChanged,
     );

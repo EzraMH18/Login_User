@@ -9,6 +9,7 @@ class User {
   String name;
   String email;
   String password;
+  String password_confirmation;
   String handphone;
   String role;
 
@@ -17,6 +18,7 @@ class User {
     this.name = "",
     this.email = "",
     this.password = "",
+    this.password_confirmation = "",
     this.handphone = "",
     this.role = "",
   });
@@ -30,7 +32,8 @@ class User {
         "name": name,
         "email": email,
         "handphone": handphone,
-        "passwor": password,
+        "password": password,
+        "password confirmation": password_confirmation,
       };
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

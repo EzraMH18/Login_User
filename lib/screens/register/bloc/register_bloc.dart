@@ -20,5 +20,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
     });
     on<ShowPasswordEvent>(
         (event, emit) => emit(state.copyWith(isShownPassword: event.isShown)));
+    on<ShowConfirmPasswordEvent>((event, emit) =>
+        emit(state.copyWith(isShownConfirmPassword: event.isShown)));
   }
 }

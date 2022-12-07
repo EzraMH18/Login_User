@@ -8,20 +8,18 @@ import '../../models/user_model.dart';
 import '../../widgets/my_button.dart';
 import '../../widgets/my_text_field.dart';
 import '../home/home_screen.dart';
-import '../register/register_screen.dart';
 import 'bloc/login_bloc.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class AdminLoginScreen extends StatefulWidget {
+  const AdminLoginScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<AdminLoginScreen> createState() => _AdminLoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _AdminLoginScreenState extends State<AdminLoginScreen> {
   final _formKey = GlobalKey<FormBuilderState>();
   var _user = User();
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -50,9 +48,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Sign In',
+                      'Welcome, Admin!',
                       style: TextStyle(
-                        fontSize: 22,
+                        fontSize: 28,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -99,53 +97,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(
                       height: 16,
                     ),
-                    Row(
-                      children: [
-                        Text(
-                          'Forgot Password?',
-                          style: TextStyle(
-                            fontSize: 16,
-                          ),
-                        ),
-                        TextButton(
-                          onPressed: () {},
-                          child: Text('Click Here'),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 16,
-                    ),
                     SizedBox(
                       width: double.infinity,
                       height: 44,
                       child: MyButton(
-                        'Sign In',
+                        'Login',
                         onClick: () => _onLoginClick(context),
                       ),
-                    ),
-                    SizedBox(
-                      height: 16,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Don’t Have An Account?',
-                          style: TextStyle(
-                            fontSize: 16,
-                          ),
-                        ),
-                        TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => RegisterScreen()));
-                          },
-                          child: Text('Sign Up'),
-                        ),
-                      ],
                     ),
                   ],
                 ),
