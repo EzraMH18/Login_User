@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:register_login/screens/login/login_screen.dart';
-import 'package:register_login/screens/login/pilihan_login.dart';
+import 'package:register_login/screens/home/admin/admin_dashboard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: PilihanLogin(),
+      home: AdminDashboard(),
       debugShowCheckedModeBanner: false,
     );
   }

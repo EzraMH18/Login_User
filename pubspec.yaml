@@ -45,6 +45,10 @@ dependencies:
   sizer: ^2.0.15
   sign_button: ^2.0.2
   form_builder_validators: ^8.4.0
+  bottom_navy_bar: ^6.0.0
+  carousel_slider: ^4.1.1
+  dropdown_search: ^5.0.5
+
 
 dev_dependencies:
   flutter_test:

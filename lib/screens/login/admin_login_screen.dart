@@ -7,7 +7,7 @@ import 'package:flutter_form_builder/flutter_form_builder.dart';
 import '../../models/user_model.dart';
 import '../../widgets/my_button.dart';
 import '../../widgets/my_text_field.dart';
-import '../home/home_screen.dart';
+import '../home/admin/admin_home.dart';
 import 'bloc/login_bloc.dart';
 
 class AdminLoginScreen extends StatefulWidget {
@@ -35,9 +35,8 @@ class _AdminLoginScreenState extends State<AdminLoginScreen> {
             if (state is LoginStatusState) {
               WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()));
+                    MaterialPageRoute(builder: (context) => AdminHome()));
               });
-              log(state.data.toString());
             }
             return Padding(
               padding: const EdgeInsets.all(16.0),
